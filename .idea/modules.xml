@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/communication-protocol-comparison.iml" filepath="$PROJECT_DIR$/communication-protocol-comparison.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-grpc-server/java-grpc-server.iml" filepath="$PROJECT_DIR$/java-grpc-server/java-grpc-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-rest-server/java-rest-server.iml" filepath="$PROJECT_DIR$/java-rest-server/java-rest-server.iml" />
     </modules>
   </component>
