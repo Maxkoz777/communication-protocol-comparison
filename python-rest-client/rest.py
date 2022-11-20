@@ -2,9 +2,9 @@ import requests
 
 
 def make_request():
-    return requests.get(
-        url='https://localhost:9090/api/greeting',
-        params={
+    return requests.post(
+        url='http://127.0.0.1:8080/api/greeting',
+        json={
             'name': 'Daniil',
             'hobbies': []
         }
