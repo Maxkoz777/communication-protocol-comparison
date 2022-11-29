@@ -1316,6 +1316,1127 @@ public final class GreetingServiceOuterClass {
 
   }
 
+  public interface EnormousDTOOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.example.grpc.EnormousDTO)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    java.util.List<java.lang.String>
+        getStringsList();
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    int getStringsCount();
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    java.lang.String getStrings(int index);
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getStringsBytes(int index);
+
+    /**
+     * <code>repeated int64 longs = 2;</code>
+     */
+    java.util.List<java.lang.Long> getLongsList();
+    /**
+     * <code>repeated int64 longs = 2;</code>
+     */
+    int getLongsCount();
+    /**
+     * <code>repeated int64 longs = 2;</code>
+     */
+    long getLongs(int index);
+
+    /**
+     * <code>repeated double doubles = 3;</code>
+     */
+    java.util.List<java.lang.Double> getDoublesList();
+    /**
+     * <code>repeated double doubles = 3;</code>
+     */
+    int getDoublesCount();
+    /**
+     * <code>repeated double doubles = 3;</code>
+     */
+    double getDoubles(int index);
+
+    /**
+     * <code>repeated bool booleans = 4;</code>
+     */
+    java.util.List<java.lang.Boolean> getBooleansList();
+    /**
+     * <code>repeated bool booleans = 4;</code>
+     */
+    int getBooleansCount();
+    /**
+     * <code>repeated bool booleans = 4;</code>
+     */
+    boolean getBooleans(int index);
+  }
+  /**
+   * Protobuf type {@code com.example.grpc.EnormousDTO}
+   */
+  public  static final class EnormousDTO extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.example.grpc.EnormousDTO)
+      EnormousDTOOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use EnormousDTO.newBuilder() to construct.
+    private EnormousDTO(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private EnormousDTO() {
+      strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      longs_ = emptyLongList();
+      doubles_ = emptyDoubleList();
+      booleans_ = emptyBooleanList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new EnormousDTO();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private EnormousDTO(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                strings_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              strings_.add(s);
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                longs_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              longs_.addLong(input.readInt64());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                longs_ = newLongList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                longs_.addLong(input.readInt64());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 25: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                doubles_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              doubles_.addDouble(input.readDouble());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                doubles_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                doubles_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                booleans_ = newBooleanList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              booleans_.addBoolean(input.readBool());
+              break;
+            }
+            case 34: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                booleans_ = newBooleanList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                booleans_.addBoolean(input.readBool());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          strings_ = strings_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          longs_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          doubles_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          booleans_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.example.grpc.GreetingServiceOuterClass.internal_static_com_example_grpc_EnormousDTO_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.example.grpc.GreetingServiceOuterClass.internal_static_com_example_grpc_EnormousDTO_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.example.grpc.GreetingServiceOuterClass.EnormousDTO.class, com.example.grpc.GreetingServiceOuterClass.EnormousDTO.Builder.class);
+    }
+
+    public static final int STRINGS_FIELD_NUMBER = 1;
+    private com.google.protobuf.LazyStringList strings_;
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getStringsList() {
+      return strings_;
+    }
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    public int getStringsCount() {
+      return strings_.size();
+    }
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    public java.lang.String getStrings(int index) {
+      return strings_.get(index);
+    }
+    /**
+     * <code>repeated string strings = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getStringsBytes(int index) {
+      return strings_.getByteString(index);
+    }
+
+    public static final int LONGS_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.LongList longs_;
+    /**
+     * <code>repeated int64 longs = 2;</code>
+     */
+    public java.util.List<java.lang.Long>
+        getLongsList() {
+      return longs_;
+    }
+    /**
+     * <code>repeated int64 longs = 2;</code>
+     */
+    public int getLongsCount() {
+      return longs_.size();
+    }
+    /**
+     * <code>repeated int64 longs = 2;</code>
+     */
+    public long getLongs(int index) {
+      return longs_.getLong(index);
+    }
+    private int longsMemoizedSerializedSize = -1;
+
+    public static final int DOUBLES_FIELD_NUMBER = 3;
+    private com.google.protobuf.Internal.DoubleList doubles_;
+    /**
+     * <code>repeated double doubles = 3;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getDoublesList() {
+      return doubles_;
+    }
+    /**
+     * <code>repeated double doubles = 3;</code>
+     */
+    public int getDoublesCount() {
+      return doubles_.size();
+    }
+    /**
+     * <code>repeated double doubles = 3;</code>
+     */
+    public double getDoubles(int index) {
+      return doubles_.getDouble(index);
+    }
+    private int doublesMemoizedSerializedSize = -1;
+
+    public static final int BOOLEANS_FIELD_NUMBER = 4;
+    private com.google.protobuf.Internal.BooleanList booleans_;
+    /**
+     * <code>repeated bool booleans = 4;</code>
+     */
+    public java.util.List<java.lang.Boolean>
+        getBooleansList() {
+      return booleans_;
+    }
+    /**
+     * <code>repeated bool booleans = 4;</code>
+     */
+    public int getBooleansCount() {
+      return booleans_.size();
+    }
+    /**
+     * <code>repeated bool booleans = 4;</code>
+     */
+    public boolean getBooleans(int index) {
+      return booleans_.getBoolean(index);
+    }
+    private int booleansMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < strings_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, strings_.getRaw(i));
+      }
+      if (getLongsList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(longsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < longs_.size(); i++) {
+        output.writeInt64NoTag(longs_.getLong(i));
+      }
+      if (getDoublesList().size() > 0) {
+        output.writeUInt32NoTag(26);
+        output.writeUInt32NoTag(doublesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < doubles_.size(); i++) {
+        output.writeDoubleNoTag(doubles_.getDouble(i));
+      }
+      if (getBooleansList().size() > 0) {
+        output.writeUInt32NoTag(34);
+        output.writeUInt32NoTag(booleansMemoizedSerializedSize);
+      }
+      for (int i = 0; i < booleans_.size(); i++) {
+        output.writeBoolNoTag(booleans_.getBoolean(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < strings_.size(); i++) {
+          dataSize += computeStringSizeNoTag(strings_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getStringsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < longs_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt64SizeNoTag(longs_.getLong(i));
+        }
+        size += dataSize;
+        if (!getLongsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        longsMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getDoublesList().size();
+        size += dataSize;
+        if (!getDoublesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        doublesMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        dataSize = 1 * getBooleansList().size();
+        size += dataSize;
+        if (!getBooleansList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        booleansMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.example.grpc.GreetingServiceOuterClass.EnormousDTO)) {
+        return super.equals(obj);
+      }
+      com.example.grpc.GreetingServiceOuterClass.EnormousDTO other = (com.example.grpc.GreetingServiceOuterClass.EnormousDTO) obj;
+
+      if (!getStringsList()
+          .equals(other.getStringsList())) return false;
+      if (!getLongsList()
+          .equals(other.getLongsList())) return false;
+      if (!getDoublesList()
+          .equals(other.getDoublesList())) return false;
+      if (!getBooleansList()
+          .equals(other.getBooleansList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStringsCount() > 0) {
+        hash = (37 * hash) + STRINGS_FIELD_NUMBER;
+        hash = (53 * hash) + getStringsList().hashCode();
+      }
+      if (getLongsCount() > 0) {
+        hash = (37 * hash) + LONGS_FIELD_NUMBER;
+        hash = (53 * hash) + getLongsList().hashCode();
+      }
+      if (getDoublesCount() > 0) {
+        hash = (37 * hash) + DOUBLES_FIELD_NUMBER;
+        hash = (53 * hash) + getDoublesList().hashCode();
+      }
+      if (getBooleansCount() > 0) {
+        hash = (37 * hash) + BOOLEANS_FIELD_NUMBER;
+        hash = (53 * hash) + getBooleansList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.example.grpc.GreetingServiceOuterClass.EnormousDTO prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.example.grpc.EnormousDTO}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.example.grpc.EnormousDTO)
+        com.example.grpc.GreetingServiceOuterClass.EnormousDTOOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.example.grpc.GreetingServiceOuterClass.internal_static_com_example_grpc_EnormousDTO_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.example.grpc.GreetingServiceOuterClass.internal_static_com_example_grpc_EnormousDTO_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.example.grpc.GreetingServiceOuterClass.EnormousDTO.class, com.example.grpc.GreetingServiceOuterClass.EnormousDTO.Builder.class);
+      }
+
+      // Construct using com.example.grpc.GreetingServiceOuterClass.EnormousDTO.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        longs_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        doubles_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        booleans_ = emptyBooleanList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.example.grpc.GreetingServiceOuterClass.internal_static_com_example_grpc_EnormousDTO_descriptor;
+      }
+
+      @java.lang.Override
+      public com.example.grpc.GreetingServiceOuterClass.EnormousDTO getDefaultInstanceForType() {
+        return com.example.grpc.GreetingServiceOuterClass.EnormousDTO.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.example.grpc.GreetingServiceOuterClass.EnormousDTO build() {
+        com.example.grpc.GreetingServiceOuterClass.EnormousDTO result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.example.grpc.GreetingServiceOuterClass.EnormousDTO buildPartial() {
+        com.example.grpc.GreetingServiceOuterClass.EnormousDTO result = new com.example.grpc.GreetingServiceOuterClass.EnormousDTO(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          strings_ = strings_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.strings_ = strings_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          longs_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.longs_ = longs_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          doubles_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.doubles_ = doubles_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          booleans_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.booleans_ = booleans_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.example.grpc.GreetingServiceOuterClass.EnormousDTO) {
+          return mergeFrom((com.example.grpc.GreetingServiceOuterClass.EnormousDTO)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.example.grpc.GreetingServiceOuterClass.EnormousDTO other) {
+        if (other == com.example.grpc.GreetingServiceOuterClass.EnormousDTO.getDefaultInstance()) return this;
+        if (!other.strings_.isEmpty()) {
+          if (strings_.isEmpty()) {
+            strings_ = other.strings_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStringsIsMutable();
+            strings_.addAll(other.strings_);
+          }
+          onChanged();
+        }
+        if (!other.longs_.isEmpty()) {
+          if (longs_.isEmpty()) {
+            longs_ = other.longs_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureLongsIsMutable();
+            longs_.addAll(other.longs_);
+          }
+          onChanged();
+        }
+        if (!other.doubles_.isEmpty()) {
+          if (doubles_.isEmpty()) {
+            doubles_ = other.doubles_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureDoublesIsMutable();
+            doubles_.addAll(other.doubles_);
+          }
+          onChanged();
+        }
+        if (!other.booleans_.isEmpty()) {
+          if (booleans_.isEmpty()) {
+            booleans_ = other.booleans_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureBooleansIsMutable();
+            booleans_.addAll(other.booleans_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.example.grpc.GreetingServiceOuterClass.EnormousDTO parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.example.grpc.GreetingServiceOuterClass.EnormousDTO) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringList strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureStringsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          strings_ = new com.google.protobuf.LazyStringArrayList(strings_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getStringsList() {
+        return strings_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public int getStringsCount() {
+        return strings_.size();
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public java.lang.String getStrings(int index) {
+        return strings_.get(index);
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getStringsBytes(int index) {
+        return strings_.getByteString(index);
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public Builder setStrings(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStringsIsMutable();
+        strings_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public Builder addStrings(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureStringsIsMutable();
+        strings_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public Builder addAllStrings(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureStringsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, strings_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public Builder clearStrings() {
+        strings_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string strings = 1;</code>
+       */
+      public Builder addStringsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureStringsIsMutable();
+        strings_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.LongList longs_ = emptyLongList();
+      private void ensureLongsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          longs_ = mutableCopy(longs_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public java.util.List<java.lang.Long>
+          getLongsList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(longs_) : longs_;
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public int getLongsCount() {
+        return longs_.size();
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public long getLongs(int index) {
+        return longs_.getLong(index);
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public Builder setLongs(
+          int index, long value) {
+        ensureLongsIsMutable();
+        longs_.setLong(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public Builder addLongs(long value) {
+        ensureLongsIsMutable();
+        longs_.addLong(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public Builder addAllLongs(
+          java.lang.Iterable<? extends java.lang.Long> values) {
+        ensureLongsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, longs_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int64 longs = 2;</code>
+       */
+      public Builder clearLongs() {
+        longs_ = emptyLongList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.DoubleList doubles_ = emptyDoubleList();
+      private void ensureDoublesIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          doubles_ = mutableCopy(doubles_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getDoublesList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(doubles_) : doubles_;
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public int getDoublesCount() {
+        return doubles_.size();
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public double getDoubles(int index) {
+        return doubles_.getDouble(index);
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public Builder setDoubles(
+          int index, double value) {
+        ensureDoublesIsMutable();
+        doubles_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public Builder addDoubles(double value) {
+        ensureDoublesIsMutable();
+        doubles_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public Builder addAllDoubles(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureDoublesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, doubles_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated double doubles = 3;</code>
+       */
+      public Builder clearDoubles() {
+        doubles_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.BooleanList booleans_ = emptyBooleanList();
+      private void ensureBooleansIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          booleans_ = mutableCopy(booleans_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public java.util.List<java.lang.Boolean>
+          getBooleansList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(booleans_) : booleans_;
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public int getBooleansCount() {
+        return booleans_.size();
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public boolean getBooleans(int index) {
+        return booleans_.getBoolean(index);
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public Builder setBooleans(
+          int index, boolean value) {
+        ensureBooleansIsMutable();
+        booleans_.setBoolean(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public Builder addBooleans(boolean value) {
+        ensureBooleansIsMutable();
+        booleans_.addBoolean(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public Builder addAllBooleans(
+          java.lang.Iterable<? extends java.lang.Boolean> values) {
+        ensureBooleansIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, booleans_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated bool booleans = 4;</code>
+       */
+      public Builder clearBooleans() {
+        booleans_ = emptyBooleanList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.example.grpc.EnormousDTO)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.example.grpc.EnormousDTO)
+    private static final com.example.grpc.GreetingServiceOuterClass.EnormousDTO DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.example.grpc.GreetingServiceOuterClass.EnormousDTO();
+    }
+
+    public static com.example.grpc.GreetingServiceOuterClass.EnormousDTO getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<EnormousDTO>
+        PARSER = new com.google.protobuf.AbstractParser<EnormousDTO>() {
+      @java.lang.Override
+      public EnormousDTO parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new EnormousDTO(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<EnormousDTO> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<EnormousDTO> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.example.grpc.GreetingServiceOuterClass.EnormousDTO getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_example_grpc_HelloRequest_descriptor;
   private static final 
@@ -1326,6 +2447,11 @@ public final class GreetingServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_example_grpc_HelloResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_example_grpc_EnormousDTO_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_example_grpc_EnormousDTO_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1338,9 +2464,17 @@ public final class GreetingServiceOuterClass {
       "\n\025GreetingService.proto\022\020com.example.grp" +
       "c\"-\n\014HelloRequest\022\014\n\004name\030\001 \001(\t\022\017\n\007hobbi" +
       "es\030\002 \003(\t\"!\n\rHelloResponse\022\020\n\010greeting\030\001 " +
-      "\001(\t2^\n\017GreetingService\022K\n\010greeting\022\036.com" +
-      ".example.grpc.HelloRequest\032\037.com.example" +
-      ".grpc.HelloResponseb\006proto3"
+      "\001(\t\"P\n\013EnormousDTO\022\017\n\007strings\030\001 \003(\t\022\r\n\005l" +
+      "ongs\030\002 \003(\003\022\017\n\007doubles\030\003 \003(\001\022\020\n\010booleans\030" +
+      "\004 \003(\0102\324\002\n\017GreetingService\022K\n\010greeting\022\036." +
+      "com.example.grpc.HelloRequest\032\037.com.exam" +
+      "ple.grpc.HelloResponse\022R\n\017longComputatio" +
+      "n\022\036.com.example.grpc.HelloRequest\032\037.com." +
+      "example.grpc.HelloResponse\022L\n\014heavyPaylo" +
+      "ad\022\035.com.example.grpc.EnormousDTO\032\035.com." +
+      "example.grpc.EnormousDTO\022R\n\020heavyPayload" +
+      "List\022\035.com.example.grpc.EnormousDTO\032\035.co" +
+      "m.example.grpc.EnormousDTO0\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1358,6 +2492,12 @@ public final class GreetingServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_grpc_HelloResponse_descriptor,
         new java.lang.String[] { "Greeting", });
+    internal_static_com_example_grpc_EnormousDTO_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_com_example_grpc_EnormousDTO_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_example_grpc_EnormousDTO_descriptor,
+        new java.lang.String[] { "Strings", "Longs", "Doubles", "Booleans", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

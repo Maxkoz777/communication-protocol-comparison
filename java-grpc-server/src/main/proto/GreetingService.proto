@@ -10,6 +10,16 @@ message HelloResponse {
   string greeting = 1;
 }
 
+message EnormousDTO {
+  repeated string strings = 1;
+  repeated int64 longs = 2;
+  repeated double doubles = 3;
+  repeated bool booleans = 4;
+}
+
 service GreetingService {
   rpc greeting(HelloRequest) returns (HelloResponse);
+  rpc longComputation(HelloRequest) returns (HelloResponse);
+  rpc heavyPayload(EnormousDTO) returns (EnormousDTO);
+  rpc heavyPayloadList(EnormousDTO) returns(stream EnormousDTO);
 }
