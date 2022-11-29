@@ -58,6 +58,99 @@ public final class GreetingServiceGrpc {
     return getGreetingMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.HelloRequest,
+      com.example.grpc.GreetingServiceOuterClass.HelloResponse> getLongComputationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "longComputation",
+      requestType = com.example.grpc.GreetingServiceOuterClass.HelloRequest.class,
+      responseType = com.example.grpc.GreetingServiceOuterClass.HelloResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.HelloRequest,
+      com.example.grpc.GreetingServiceOuterClass.HelloResponse> getLongComputationMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.HelloRequest, com.example.grpc.GreetingServiceOuterClass.HelloResponse> getLongComputationMethod;
+    if ((getLongComputationMethod = GreetingServiceGrpc.getLongComputationMethod) == null) {
+      synchronized (GreetingServiceGrpc.class) {
+        if ((getLongComputationMethod = GreetingServiceGrpc.getLongComputationMethod) == null) {
+          GreetingServiceGrpc.getLongComputationMethod = getLongComputationMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.GreetingServiceOuterClass.HelloRequest, com.example.grpc.GreetingServiceOuterClass.HelloResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "longComputation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.GreetingServiceOuterClass.HelloRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.GreetingServiceOuterClass.HelloResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new GreetingServiceMethodDescriptorSupplier("longComputation"))
+              .build();
+        }
+      }
+    }
+    return getLongComputationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.EnormousDTO,
+      com.example.grpc.GreetingServiceOuterClass.EnormousDTO> getHeavyPayloadMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "heavyPayload",
+      requestType = com.example.grpc.GreetingServiceOuterClass.EnormousDTO.class,
+      responseType = com.example.grpc.GreetingServiceOuterClass.EnormousDTO.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.EnormousDTO,
+      com.example.grpc.GreetingServiceOuterClass.EnormousDTO> getHeavyPayloadMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.EnormousDTO, com.example.grpc.GreetingServiceOuterClass.EnormousDTO> getHeavyPayloadMethod;
+    if ((getHeavyPayloadMethod = GreetingServiceGrpc.getHeavyPayloadMethod) == null) {
+      synchronized (GreetingServiceGrpc.class) {
+        if ((getHeavyPayloadMethod = GreetingServiceGrpc.getHeavyPayloadMethod) == null) {
+          GreetingServiceGrpc.getHeavyPayloadMethod = getHeavyPayloadMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.GreetingServiceOuterClass.EnormousDTO, com.example.grpc.GreetingServiceOuterClass.EnormousDTO>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "heavyPayload"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.GreetingServiceOuterClass.EnormousDTO.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.GreetingServiceOuterClass.EnormousDTO.getDefaultInstance()))
+              .setSchemaDescriptor(new GreetingServiceMethodDescriptorSupplier("heavyPayload"))
+              .build();
+        }
+      }
+    }
+    return getHeavyPayloadMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.EnormousDTO,
+      com.example.grpc.GreetingServiceOuterClass.EnormousDTO> getHeavyPayloadListMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "heavyPayloadList",
+      requestType = com.example.grpc.GreetingServiceOuterClass.EnormousDTO.class,
+      responseType = com.example.grpc.GreetingServiceOuterClass.EnormousDTO.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.EnormousDTO,
+      com.example.grpc.GreetingServiceOuterClass.EnormousDTO> getHeavyPayloadListMethod() {
+    io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.EnormousDTO, com.example.grpc.GreetingServiceOuterClass.EnormousDTO> getHeavyPayloadListMethod;
+    if ((getHeavyPayloadListMethod = GreetingServiceGrpc.getHeavyPayloadListMethod) == null) {
+      synchronized (GreetingServiceGrpc.class) {
+        if ((getHeavyPayloadListMethod = GreetingServiceGrpc.getHeavyPayloadListMethod) == null) {
+          GreetingServiceGrpc.getHeavyPayloadListMethod = getHeavyPayloadListMethod =
+              io.grpc.MethodDescriptor.<com.example.grpc.GreetingServiceOuterClass.EnormousDTO, com.example.grpc.GreetingServiceOuterClass.EnormousDTO>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "heavyPayloadList"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.GreetingServiceOuterClass.EnormousDTO.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.example.grpc.GreetingServiceOuterClass.EnormousDTO.getDefaultInstance()))
+              .setSchemaDescriptor(new GreetingServiceMethodDescriptorSupplier("heavyPayloadList"))
+              .build();
+        }
+      }
+    }
+    return getHeavyPayloadListMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -92,6 +185,27 @@ public final class GreetingServiceGrpc {
       asyncUnimplementedUnaryCall(getGreetingMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void longComputation(com.example.grpc.GreetingServiceOuterClass.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getLongComputationMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void heavyPayload(com.example.grpc.GreetingServiceOuterClass.EnormousDTO request,
+        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.EnormousDTO> responseObserver) {
+      asyncUnimplementedUnaryCall(getHeavyPayloadMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void heavyPayloadList(com.example.grpc.GreetingServiceOuterClass.EnormousDTO request,
+        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.EnormousDTO> responseObserver) {
+      asyncUnimplementedUnaryCall(getHeavyPayloadListMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -101,6 +215,27 @@ public final class GreetingServiceGrpc {
                 com.example.grpc.GreetingServiceOuterClass.HelloRequest,
                 com.example.grpc.GreetingServiceOuterClass.HelloResponse>(
                   this, METHODID_GREETING)))
+          .addMethod(
+            getLongComputationMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.example.grpc.GreetingServiceOuterClass.HelloRequest,
+                com.example.grpc.GreetingServiceOuterClass.HelloResponse>(
+                  this, METHODID_LONG_COMPUTATION)))
+          .addMethod(
+            getHeavyPayloadMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.example.grpc.GreetingServiceOuterClass.EnormousDTO,
+                com.example.grpc.GreetingServiceOuterClass.EnormousDTO>(
+                  this, METHODID_HEAVY_PAYLOAD)))
+          .addMethod(
+            getHeavyPayloadListMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                com.example.grpc.GreetingServiceOuterClass.EnormousDTO,
+                com.example.grpc.GreetingServiceOuterClass.EnormousDTO>(
+                  this, METHODID_HEAVY_PAYLOAD_LIST)))
           .build();
     }
   }
@@ -130,6 +265,30 @@ public final class GreetingServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getGreetingMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void longComputation(com.example.grpc.GreetingServiceOuterClass.HelloRequest request,
+        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getLongComputationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void heavyPayload(com.example.grpc.GreetingServiceOuterClass.EnormousDTO request,
+        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.EnormousDTO> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getHeavyPayloadMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void heavyPayloadList(com.example.grpc.GreetingServiceOuterClass.EnormousDTO request,
+        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.EnormousDTO> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getHeavyPayloadListMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -155,6 +314,28 @@ public final class GreetingServiceGrpc {
     public com.example.grpc.GreetingServiceOuterClass.HelloResponse greeting(com.example.grpc.GreetingServiceOuterClass.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getGreetingMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.grpc.GreetingServiceOuterClass.HelloResponse longComputation(com.example.grpc.GreetingServiceOuterClass.HelloRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getLongComputationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.example.grpc.GreetingServiceOuterClass.EnormousDTO heavyPayload(com.example.grpc.GreetingServiceOuterClass.EnormousDTO request) {
+      return blockingUnaryCall(
+          getChannel(), getHeavyPayloadMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.example.grpc.GreetingServiceOuterClass.EnormousDTO> heavyPayloadList(
+        com.example.grpc.GreetingServiceOuterClass.EnormousDTO request) {
+      return blockingServerStreamingCall(
+          getChannel(), getHeavyPayloadListMethod(), getCallOptions(), request);
     }
   }
 
@@ -183,9 +364,28 @@ public final class GreetingServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getGreetingMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.GreetingServiceOuterClass.HelloResponse> longComputation(
+        com.example.grpc.GreetingServiceOuterClass.HelloRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getLongComputationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.GreetingServiceOuterClass.EnormousDTO> heavyPayload(
+        com.example.grpc.GreetingServiceOuterClass.EnormousDTO request) {
+      return futureUnaryCall(
+          getChannel().newCall(getHeavyPayloadMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GREETING = 0;
+  private static final int METHODID_LONG_COMPUTATION = 1;
+  private static final int METHODID_HEAVY_PAYLOAD = 2;
+  private static final int METHODID_HEAVY_PAYLOAD_LIST = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -207,6 +407,18 @@ public final class GreetingServiceGrpc {
         case METHODID_GREETING:
           serviceImpl.greeting((com.example.grpc.GreetingServiceOuterClass.HelloRequest) request,
               (io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse>) responseObserver);
+          break;
+        case METHODID_LONG_COMPUTATION:
+          serviceImpl.longComputation((com.example.grpc.GreetingServiceOuterClass.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse>) responseObserver);
+          break;
+        case METHODID_HEAVY_PAYLOAD:
+          serviceImpl.heavyPayload((com.example.grpc.GreetingServiceOuterClass.EnormousDTO) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.EnormousDTO>) responseObserver);
+          break;
+        case METHODID_HEAVY_PAYLOAD_LIST:
+          serviceImpl.heavyPayloadList((com.example.grpc.GreetingServiceOuterClass.EnormousDTO) request,
+              (io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.EnormousDTO>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -270,6 +482,9 @@ public final class GreetingServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new GreetingServiceFileDescriptorSupplier())
               .addMethod(getGreetingMethod())
+              .addMethod(getLongComputationMethod())
+              .addMethod(getHeavyPayloadMethod())
+              .addMethod(getHeavyPayloadListMethod())
               .build();
         }
       }
